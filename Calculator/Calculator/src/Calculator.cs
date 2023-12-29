@@ -1,4 +1,4 @@
-﻿namespace Calculator.src
+namespace Calculator
 {
     public class Calculator : ICalculator
     {

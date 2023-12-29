@@ -1,15 +1,17 @@
-﻿using Calculator.src;
+﻿namespace CalculatorApp;
 
-namespace CalculatorApp
+internal class Program
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-		{
+	private static void Main(string[] args)
+	{
 
-			var calculator = new Calculator.src.Calculator();
+		
+		var calculator = new Calculator.Calculator();
+
+		var additiion = calculator.Add(30.95, 10);
+		var subtrcation = calculator.Subtract(300, 150);
 
 
-		}
-    }
+
+	}
 }
