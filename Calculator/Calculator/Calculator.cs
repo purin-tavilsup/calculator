@@ -2,6 +2,13 @@ namespace Calculator
 {
     public class Calculator : ICalculator
     {
+		private readonly IUserIdentityService _userIdentityService;
+
+		public Calculator(IUserIdentityService userIdentityService)
+		{
+			_userIdentityService = userIdentityService;
+		}
+
 		public double Add(double value1, double value2)
 		{
 			return value1 + value2;
@@ -21,5 +28,10 @@ namespace Calculator
 		{
             return value1 / value2;
         }
+
+		public bool LoginUser(string username, string userId)
+		{
+			return _userIdentityService.ValidateUser(userId, username);
+		}
 	}
 }
